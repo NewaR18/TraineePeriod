@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js" type = "text/javascript"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" type = "text/javascript"></script>
+
+    <title>Document</title>
+    <style>
+        .first{
+            color:black;
+            text-align: center;
+            font-size: 60px;
+        }
+        .a1{
+            padding:40px;
+            border-radius:5px;
+            font-size:20px;
+        }
+        .a2{
+            font-size:40px;
+            
+        }
+        .main{
+            display:flex;
+            justify-content:space-evenly;
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- First Name: <input data-bind="value:ob1">
+    Second Name:<input data-bind="value:ob2">
+    <strong data-bind="text:ob3"></strong>
+    <script>
+        function AppViewModel(){
+            this.ob1=ko.observable("Enter your first value");
+            this.ob2=ko.observable("Enter your second value");
+            
+        }
+        ko.applyBindings(new AppViewModel());
+        </script> -->
+        <!-- <div class="first">Number of walks</div>
+        <span data-bind="text:su"></span>
+        <div class="main">
+            <button class="a1" data-bind="">+</button>
+            <button class="a1">-</button>
+        </div> -->
+        <div data-bind="with: master">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+        </div>
+        
+        <script>
+            function AppViewModel(){
+                var count=0;
+            this.su=ko.observable(count);
+            this.button1=ko.computed(function(){
+                
+            })
+            
+        }
+        ko.applyBindings(new AppViewModel());
+        </script>
+</body>
+</html>

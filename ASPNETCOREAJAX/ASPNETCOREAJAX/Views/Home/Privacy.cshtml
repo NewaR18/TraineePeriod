@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<div data-bind="with:Master">
+    <span>Enter id: </span><input data-bind="value:id" /><br/>
+    <span>Enter Name: </span><input data-bind="value:name" /><br/>
+    <span>Enter Production</span><input data-bind="value:production" /><br/>
+    <span>Enter Price</span><input data-bind="value:price" /><br/>
+    <button data-bind="event:{click: savethis}">Save</button>
+</div>
+
+@section Scripts{
+    <script>
+        function AppViewModel(){
+            var self=this;
+            models={
+                Master:function(item){
+                    item=item||{};
+                    this.id=ko.observable(item.id || '');
+                    this.name=ko.observable(item.name || '');
+                    this.production=ko.observable(item.production || '');
+                    this.price=ko.observable(item.price || '');
+                }
+            }
+            savethis=function(){
+                $.ajax({
+                    type:"GET",
+                    url: "@Url.Action("GetNames")",
+                    dataType:"json",
+                    success: function(result){
+                        console.log(result);
+                    },
+                    error: function(req,status,error){
+                        console.log(status);
+                    }
+                });
+                $.ajax({
+                    type:"POST",
+                    url: "@Url.Action("PostName")",
+                    dataType:"json",
+                    data:{id: self.Master().id(),name:self.Master().name(),production:self.Master().production(),price:self.Master().price()},
+                    success: function(result){
+                        console.log(result);
+                    },
+                    error: function(req,status,error){
+                        console.log(status);
+                    }
+                });
+            }
+            Init = function() {
+            self.Master = ko.observable(new models.Master());
+            }
+            Init();
+            
+        }
+        var obj;
+            $(document).ready(function () {
+                obj = new AppViewModel();
+                ko.applyBindings(obj);
+        });
+        
+</script>
+}

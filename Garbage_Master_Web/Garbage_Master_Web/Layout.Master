@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="Garbage_Master_Web.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="~/wwwroot/css/layout2.css"/>
+    
+    <script src="wwwroot/js/jquery-3.6.3.js"></script>
+</head>
+<body>
+    
+        <header>
+            <div class="nav">
+                <img src="~/wwwroot/images/logo1.png"  runat="server"  class="logo" alt="logo" />
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Register</a></li>
+                    <li><a href="">Objectives</a></li>
+                    <li><a href="">Overview</a></li>
+                    <li><a href="">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+           </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        <footer>
+            <div class="footer1">
+                <div>
+                    <div class="footlogo">
+                    <img src="~/wwwroot/images/logo2.png"  runat="server"  class="logo2" alt="logo" />
+                    <p id="title">Garbage Master</p>
+                     </div>
+                    <p class="est">Established in 2023</p>
+                </div>
+                <div>
+                    <p>Quick Links</p>
+                    <ul>
+                        <li>Home</li>
+                        <li>Register</li>
+                        <li>Objectives</li>
+                        <li>Overview</li>
+                        <li>Team</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Our Services</p>
+                    <ul>
+                        <li>Gather waste data drom civilians</li>
+                        <li>Provide Citizens white wide coverage of waste data</li>
+                        <li>Display map representation of waste data</li>
+                        <li>Promote Waste Segregation</li>
+                        <li>Proper Waste Management System</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Contact us</p>
+                    <ul>
+                        <li>Ph No: +977 986111726</li>
+                        <li>Email: sudipshrestha960@gmail.com</li>
+                        <li>Tarakeshwor-9, Kathmandu</li>
+                        <li>Street 219 P.O. 4050</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+   
+</body>
+</html>

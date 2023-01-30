@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            $("#tabs").tabs();
+        });
+    </script>
+    <style>
+        #tabs ul{
+            display:flex;
+            justify-content:space-evenly;
+            list-style: none;
+        }
+        #tabs ul li span a{
+            text-decoration:none;
+            color:white;;
+        }
+        #tabs div{
+            padding:500px;
+            background-color:#012970;
+            color:white;
+            font-size:50px;
+            font-weight :2px;
+        }
+        #tabs ul li span{
+            border:1 px solid black;
+            border-radius:2px;
+            background-color:#012970;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="tabs">
+        <ul>
+            <li><span style="border:1 px solid black;
+                border-radius:2px;"><a href="#tabs-1">First Tab</a></span></li>
+            <li><span><a href="#tabs-2">Second Tab</a></span></li>
+            <li><span><a href="#tabs-3">Third Tab</a></span></li>
+        </ul>
+        <div id="tabs-1">
+            <p>This is the first tab</p>
+
+        </div>
+        <div id="tabs-2">
+            <p>This is the second tab</p>
+        </div>
+        <div id="tabs-3">
+            <p>This is the third tab</p>
+        </div>
+    </div>
+</body>
+</html>

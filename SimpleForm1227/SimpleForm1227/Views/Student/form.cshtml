@@ -1,0 +1,29 @@
+﻿<h2>form</h2>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js" type="text/javascript"></script>
+<script src="~/Scripts/doit2.js"></script>
+@*<script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+    </script>*@
+@*form*@
+<div data-bind="with: Master">
+    <span>Name: </span><input data-bind="value:on1" /><br />
+    <span>Email: </span><input data-bind="value:on2" /><br />
+    <span>Address: </span><input data-bind="value:on3" /><br />
+    <span>Phone number: </span><input data-bind="value:on4" /><br />
+    <span>Nationality: </span>
+    <select data-bind="options: availables,optionsText:'name',optionsValue:'id',optionsCaption:'Select here', value: hello"></select><br />
+    <button data-bind="event:{click: saveprocess}">Save</button>
+    <button data-bind="event:{click: clearthis}">Clear</button>
+    <h2>Demo JavaScript in Body</h2>
+
+    <p id="demo">A Paragraph</p>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+</div>
+
+
+
+
